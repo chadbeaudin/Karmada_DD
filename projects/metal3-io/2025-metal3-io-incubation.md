@@ -11,18 +11,17 @@
 [Ricardo Rocha](https://github.com/rochaporto) conducted both due diligence and adopter interviews for Incubation. The project has completed the criteria that shows its maturity at the applied level.
 
 The TOC would like to highlight some areas from the project review:
-
-The following required incubation items were raised and implemented by the project during the review period:
-
-Other items suggested for incubation were taken as issues in the project and have also been followed up:
+* Metal3 has a very active community and its liveness has been highlighted and verified as one of the project's main strengths
+* The project relies on a well established component (Ironic) for baremetal management, bridging with the cloud native world. Relying on a stable and battle tested component such as Ironic is a key differentiator from its alternatives, and makes the project appealing also for existing Ironic deployments moving to cloud native solutions
+* The project shows governance and contribution processes that are well established and are actively worked on
 
 ### Adoption Evaluation
 
-The adopter interviews showed project usage at a level compatible with CNCF incubation. Adopters integrate Metal3 to manage baremetal cluster deployments and the hardware lifecycle for a variety use cases, with the Telco area being particularly popular.
+The adopter interviews showed project usage at a level compatible with CNCF incubation. Adopters integrate Metal3 to manage baremetal cluster deployments and the hardware lifecycle for a variety of use cases, with the Telco area being particularly popular.
 
-Adopters highlight the consistency across layers and the close integration with the ClusterAPI as one of its main strengths, as well as its reactive community and the solidity and maturity of Ironic as its core component. Adopters also mentioned the support for multiple different environments and ease of adoption of existing infrastructure as core capabilities. Adopters see the potential for further project growth through an effort of advertising more widely end users and scales of existing deployments.
+Adopters highlight the consistency across layers and the close integration with the ClusterAPI as one of its main strengths, as well as its reactive community and the solidity and maturity of Ironic as its core component. Adopters also mentioned the support for multiple different environments and ease of adoption of existing infrastructure as core capabilities. Adopters see the potential for further project growth through an effort of advertising more widely end users and scaling of existing deployments.
 
-Adopters see opportunities in allowing declaritive network configurations for environments without DHCP, a way to better separate baremetal operators from consumers with support for multiple baremetal host resources, and support for hardware management without administrator access. Adopters would also like to see support for multi-architecture and multi-tenancy, further abstractions of the underlying Ironic component better exposing internal status and error conditions, reducing the need for detailed debugging outside of the operator functionality. Failure handling is another area where extended focus could bring benefits.
+Adopters see opportunities in allowing declaritive network configurations for environments without DHCP, a way to better separate baremetal operators from consumers with support for multiple baremetal host resources, and support for hardware management without administrator access. Adopters would also like to see support for multi-architecture and multi-tenancy, further abstractions of the underlying Ironic component better exposing internal status and error conditions, reducing the need for detailed debugging outside of the operator functionality. Failure handling is another area where added focus could bring benefits.
 
 ### Final Assessment
 
@@ -40,7 +39,9 @@ N/A
 
 The project [has recently presented](https://www.youtube.com/watch?v=YhGOd9jhWog&t=932s) at TAG-Runtime.
 
-- [ ] **TAG provides insight/recommendation of the project in the context of the landscape**
+- [x] **TAG provides insight/recommendation of the project in the context of the landscape**
+
+Taken over by the TOC in the TAG transition period.
 
 - [x] **All project metadata and resources are [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
 
@@ -48,7 +49,7 @@ No issues were found during due diligence, both code and documentation are vendo
 
 - [x] **Review and acknowledgement of expectations for [Sandbox](sandbox.cncf.io) projects and requirements for moving forward through the CNCF Maturity levels.**		
 
-Done during the project's apllication, onboarding completed [Sep 8, 2020](https://github.com/cncf/toc/pull/408).
+Done during the project's application, onboarding completed [Sep 8, 2020](https://github.com/cncf/toc/pull/408).
 
 - [x] **Due Diligence Review.**
 
@@ -56,7 +57,7 @@ The initial application was initially submitted July 05, 2024.
 
 The project submitted initial DD information along with [the application](https://github.com/cncf/toc/issues/1365).
 
-Project maintainers were responsive throughout the process.
+Project maintainers were very responsive throughout the process.
 
 The process satisfies the due diligence review criteria.
 
@@ -64,12 +65,7 @@ The process satisfies the due diligence review criteria.
 
 Metal3's [documentation](https://book.metal3.io/introduction.html) is extensive providing a complete user guide, as well as an overview of the core concepts, individual components, installation and configuration. It also includes the required information for [development](https://book.metal3.io/developer_environment/tryit) and [contributions](https://metal3.io/contribute.html).
 
-A minor improvement would be to consolidate the contributing links in the project's website, with [an issue] being opened for this purpose.
-
-TODO
-https://metal3.io/contribute.html
-https://github.com/metal3-io/community/blob/main/CONTRIBUTING.md
-https://github.com/metal3-io/baremetal-operator/blob/main/CONTRIBUTING.md
+A minor improvement would be to consolidate the contributing links in the project's website, with [an issue](https://github.com/metal3-io/metal3-docs/issues/557) being opened for this purpose.
 
 ## Governance and Maintainers
 
@@ -77,7 +73,7 @@ https://github.com/metal3-io/baremetal-operator/blob/main/CONTRIBUTING.md
 
 - [x] **Clear and discoverable project governance documentation.**
 
-OpenYurt's governance is documented under the project's github repo, under [GOVERNANCE.md](https://github.com/metal3-io/community/blob/main/GOVERNANCE.md). The information provided includes extensive details on the [different roles](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-ROLE.md) and [ladder](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-LADDER.md). 
+Metal3's governance is documented under the project's github repo, under [GOVERNANCE.md](https://github.com/metal3-io/community/blob/main/GOVERNANCE.md). The information provided includes extensive details on the [different roles](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-ROLE.md) and [ladder](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-LADDER.md). 
 
 - [x] **Governance has continuously been iterated upon by the project as a result of their experience applying it, with the governance history demonstrating evolution of maturity alongside the project's maturity evolution.**
 
@@ -93,15 +89,15 @@ The project documents its commitment to [vendor neutrality](https://github.com/m
 
 - [x] **Document how the project makes decisions on leadership, contribution acceptance, requests to the CNCF, and changes to governance or project goals.**
 
-The project has documentation regarding its [contributor ladder](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-LADDER.md), as well as how [changes to the policy](https://github.com/metal3-io/community/blob/main/maintainers/README.md#changing-the-policy) can be done - requiring two thirds of existing maintainers.
+The project has documentation regarding its [contributor ladder](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-LADDER.md), as well as how [changes to the policy](https://github.com/metal3-io/community/blob/main/maintainers/README.md#changing-the-policy) can be done - requiring two thirds of existing maintainers to approve.
 
 - [x] **Document how role, function-based members, or sub-teams are assigned, onboarded, and removed for specific teams (example: Security Response Committee).**
 
-The different community roles are [well documented](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-ROLE.md) with additional information on onboarding and offboarding.
+The different community roles are [well documented](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-ROLE.md) with additional information about onboarding and offboarding.
 
 - [x] **Document a complete maintainer lifecycle process (including roles, onboarding, offboarding, and emeritus status).**
 
-Roles are [well documented](https://github.com/metal3-io/community/blob/main/maintainers/README.md) including information on how to deal with inactive members.
+Roles are [well documented](https://github.com/metal3-io/community/blob/main/maintainers/README.md) and include information on how to deal with inactive members.
 
 - [x] **Demonstrate usage of the maintainer lifecycle with outcomes, either through the addition or replacement of maintainers as project events have required.**
 
@@ -113,30 +109,25 @@ N/A
 
 ### Required
 
-- [ ] **Document complete list of current maintainers, including names, contact information, domain of responsibility, and affiliation.**
+- [x] **Document complete list of current maintainers, including names, contact information, domain of responsibility, and affiliation.**
 
-The full list of maintainers is present in a [MAINTAINERS.md](https://github.com/metal3-io/community/blob/main/OWNERS_ALIASES) file but does not currently list affiliation.
-
-maintainers: 4 redhat, 3 ericsson
-
-TODO
+The full list of maintainers is present in a [OWNERS_ALIASES](https://github.com/metal3-io/community/blob/main/OWNERS_ALIASES) file but does not currently list affiliation. [An issue](https://github.com/metal3-io/community/issues/32) has been opened to add this information.
 
 - [x] **A number of active maintainers which is appropriate to the size and scope of the project.**
 
 As of March 2025, the list of maintainers and diversity (7 for the core operator project, from 2 organizations) is appropriate to this maturity level.
 
-- [ ] **Code and Doc ownership in Github and elsewhere matches documented governance roles.**
+- [x] **Code and Doc ownership in Github and elsewhere matches documented governance roles.**
+
+A [OWNERS_ALIASES](https://github.com/metal3-io/community/blob/main/OWNERS_ALIASES) file in the community repo sets ownership and roles.
 
 - [x] **Document agreement that project will adopt CNCF Code of Conduct.**
 
 The code of conduct is [linked](https://github.com/metal3-io/community/blob/main/CODE_OF_CONDUCT.md) and is listed as a requirement from the [community page](https://github.com/metal3-io/community?tab=readme-ov-file).
 
-TODO: better link from https://metal3.io/contribute.html (this page needs improvement and to link to the github page in https://github.com/metal3-io/community )
-
 - [x] **CNCF Code of Conduct is cross-linked from other governance documents.**
 
 A specific [code of conduct](https://github.com/metal3-io/community/blob/main/CODE_OF_CONDUCT.md) links to the [CNCF code of conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
-
 
 - [x] **All subprojects, if any, are listed.**
 
@@ -146,53 +137,73 @@ A specific [code of conduct](https://github.com/metal3-io/community/blob/main/CO
 
 ### Suggested
 
-- [ ] **Contributor ladder with multiple roles for contributors.**
+- [x] **Contributor ladder with multiple roles for contributors.**
+
+The project has documentation regarding its [contributor ladder](https://github.com/metal3-io/community/blob/main/CONTRIBUTOR-LADDER.md), as well as how [changes to the policy](https://github.com/metal3-io/community/blob/main/maintainers/README.md#changing-the-policy) can be done - requiring two thirds of existing maintainers to approve.
 
 ### Required
 
-- [ ] **Clearly defined and discoverable process to submit issues or changes.**
+- [x] **Clearly defined and discoverable process to submit issues or changes.**
 
+The [contributor guide](https://github.com/metal3-io/baremetal-operator/blob/main/CONTRIBUTING.md) details how to submit and manage issues and changes. It also documents best practices for patches and branch usage, backporting, versioning and the release process.
 
-- [ ] **Project must have, and document, at least one public communications channel for users and/or contributors.**
+- [x] **Project must have, and document, at least one public communications channel for users and/or contributors.**
 
+Communication channels include slack, mailing list and regular community meetings in addition to github issues, as [documented here](https://github.com/metal3-io#contacts).
 
-- [ ] **List and document all project communication channels, including subprojects (mail list/slack/etc.).  List any non-public communications channels and what their special purpose is.**
+- [x] **List and document all project communication channels, including subprojects (mail list/slack/etc.).  List any non-public communications channels and what their special purpose is.**
 
+* [Mailing list](https://groups.google.com/g/metal3-dev)
+* [Slack](https://slack.k8s.io/)
+* [Community meetings](https://docs.google.com/document/d/1IkEIh-ffWY3DaNX3aFcAxGbttdEY_symo7WAGmzkWhU)
 
-- [ ] **Up-to-date public meeting schedulers and/or integration with CNCF calendar.**
+- [x] **Up-to-date public meeting schedulers and/or integration with CNCF calendar.**
+ 
+Meetings occur on Wednesdays 14:00 UTC using Zoom, are linked in the [github repo](https://github.com/metal3-io#contacts) with details in a [google doc](https://docs.google.com/document/d/1IkEIh-ffWY3DaNX3aFcAxGbttdEY_symo7WAGmzkWhU/edit?tab=t.0) with the required information.
 
+- [x] **Documentation of how to contribute, with increasing detail as the project matures.**
 
-- [ ] **Documentation of how to contribute, with increasing detail as the project matures.**
+The [contributor guide](https://metal3.io/contribute.html) information is extensive and complete, but there are two instances as could benefit from [consolidation](https://github.com/metal3-io/metal3-docs/issues/557).
 
+- [x] **Demonstrate contributor activity and recruitment.**
 
-- [ ] **Demonstrate contributor activity and recruitment.**
+As per [LFX Insights](https://insights.linuxfoundation.org/project/metal3/contributors?timeRange=past365days&start=2024-07-16&end=2025-07-16) the project had over 175 individual contributors in the last year. One contributor is responsible for ~30% of the activities with 6 contributors over 5%.
 
+Regarding organizations, 1 organization is responsible for 68% of the contributions with two more above 10%.
 
 ## Engineering Principles
 
 ### Suggested
 
-- [ ] **Roadmap change process is documented.**
+- [x] **Roadmap change process is documented.**
 
+[Roadmap](https://github.com/orgs/metal3-io/projects/8) is extensive and well kept, with a long list of [design documents](https://github.com/metal3-io/metal3-docs/tree/main/design) for feature discussion and design and a [well established process](https://github.com/metal3-io/community/blob/main/ROADMAP.md) for roadmap definition.
 
-- [ ] **History of regular, quality releases.**
+- [x] **History of regular, quality releases.**
 
+[Releases](https://github.com/metal3-io/baremetal-operator/releases) are frequent with well documented changelogs. Adopter interviews indicated reliability when introducing new releases and versions.
 
 ### Required 
 
-- [ ] **Document project goals and objectives that illustrate the project’s differentiation in the Cloud Native landscape as well as outlines how this project fulfills an outstanding need and/or solves a problem differently.**
+- [x] **Document project goals and objectives that illustrate the project’s differentiation in the Cloud Native landscape as well as outlines how this project fulfills an outstanding need and/or solves a problem differently.**
 
+The [project homepage](https://metal3.io/) summarizes well the mission, specific goals and the integrations with Kubernetes and the ClusterAPI in the ecosystem.
 
-- [ ] **Document what the project does, and why it does it - including viable cloud native use cases.**
+- [x] **Document what the project does, and why it does it - including viable cloud native use cases.**
 
+The [user guide](https://book.metal3.io/introduction.html) and in particular the [overview page](https://book.metal3.io/project-overview) document well the components and interactions in the project.
 
-- [ ] **Document and maintain a public roadmap or other forward looking planning document or tracking mechanism.**
+- [x] **Document and maintain a public roadmap or other forward looking planning document or tracking mechanism.**
 
+Roadmap [definition](https://github.com/metal3-io/community/blob/main/ROADMAP.md) is well described with a [live board on github](https://github.com/orgs/metal3-io/projects/8).
 
-- [ ] **Document overview of project architecture and software design that demonstrates viable cloud native use cases, as part of the project's documentation.**
+- [x] **Document overview of project architecture and software design that demonstrates viable cloud native use cases, as part of the project's documentation.**
 
+The [project overview](https://book.metal3.io/project-overview) page includes a description of the components, functionality and interactions.
 
-- [ ] **Document the project's release process.**
+- [x] **Document the project's release process.**
+
+The release process is [well documented](https://github.com/metal3-io/baremetal-operator/blob/main/docs/releasing.md).
 
 
 ## Security
@@ -205,19 +216,25 @@ N/A
 
 ### Required
 
-- [ ] **Clearly defined and discoverable process to report security issues.**
+- [x] **Clearly defined and discoverable process to report security issues.**
 
+The [project security policy](https://book.metal3.io/security_policy) includes all the information of where and how to report security issues.
 
-- [ ] **Enforcing Access Control Rules to secure the code base against attacks (Example: two factor authentication enforcement, and/or use of ACL tools.)**
+- [x] **Enforcing Access Control Rules to secure the code base against attacks (Example: two factor authentication enforcement, and/or use of ACL tools.)**
 
+Policies are [documented here](https://github.com/metal3-io/baremetal-operator/blob/main/CONTRIBUTING.md#merge-approval) and follow the kubernetes community process. Access control is done via the metal3-io github organization.
 
-- [ ] **Document assignment of security response roles and how reports are handled.**
+- [x] **Document assignment of security response roles and how reports are handled.**
 
+The [security policy](https://book.metal3.io/security_policy) document includes the definition of a security lead and the security committee, and a detailed process on how reports should be handled in the 7 days following the disclosure.
 
-- [ ] **Document Security Self-Assessment.**
+- [x] **Document Security Self-Assessment.**
 
-- [ ] **Achieve the Open Source Security Foundation (OpenSSF) Best Practices passing badge.**
+The [self assessment](https://github.com/metal3-io/metal3-docs/pull/456) for the project has been completed.
 
+- [x] **Achieve the Open Source Security Foundation (OpenSSF) Best Practices passing badge.**
+
+Information [available here](https://www.bestpractices.dev/en/projects/9160).
 
 ## Ecosystem
 
@@ -227,18 +244,21 @@ N/A
 
 ### Required
 
-- [ ] **Publicly documented list of adopters, which may indicate their adoption level (dev/trialing, prod, etc.)**
+- [x] **Publicly documented list of adopters, which may indicate their adoption level (dev/trialing, prod, etc.)**
 
+A list of [adopters](https://github.com/metal3-io/community/blob/main/ADOPTERS.md) is available in the community page.
 
-- [ ] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
+- [x] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
 
+This was validated during the adopter interviews.
 
-- [ ] **TOC verification of adopters.**
+- [x] **TOC verification of adopters.**
 
+See the adoption section of this document.
 
-- [ ] **Clearly documented integrations and/or compatibility with other CNCF projects as well as non-CNCF projects.**
+- [x] **Clearly documented integrations and/or compatibility with other CNCF projects as well as non-CNCF projects.**
 
-
+The [project overview](https://book.metal3.io/project-overview) summarizes well the interactions with Kubernetes and ClusterAPI, as well as Ironic.
 
 #### Adoption
 
@@ -270,35 +290,35 @@ Ericsson highlights the liveness of the community as one of its main strenghts, 
 
 Ericsson stresses that stability has to remain a key focus. In particular, the stability and reliability of the CI is of particular importance.
 
-##### Telekom DE
+##### Deutsche Telekom AG
 
 Jakob Shretennbrunner, Max Rink, Vuk Gojnic
 
 ###### Usage
 
-Telekom DE started using Metal3 in mid-2020, with the first production setup being deployed one year later. Part of the required work in this period was around custom tooling to interact with the project.
+Telekom started using Metal3 in mid-2020, with the first production setup being deployed one year later. Part of the required work in this period was around custom tooling to interact with the project.
 
-At the time of adoption Telekom DE did not see any viable alternative, although both Tinkerbell and Talos were considered but seen as significantly less mature - building an in-house solution was seen as the only other option. The target was to build a L3 only infrastructure, provide integration with Redfish and integration with the ClusterAPI. Telekom DE did look into EKS anywhere (supporters of Tinkerbell) but the project lacks the advanced networking features required and available in Metal3.
+At the time of adoption Telekom did not see any viable alternative, although both Tinkerbell and Talos were considered but seen as significantly less mature - building an in-house solution was seen as the only other option. The target was to build a L3 only infrastructure, provide integration with Redfish and integration with Cluster API. Telekom did look into EKS anywhere (supporters of Tinkerbell) but the project was lacking in advanced networking support and required L2 networking due to Tinkerbell, while Metal3’s support for custom cloud-init metadata allowed us to implement custom network configuration.
 
-Telekom DE currently has 300 clusters in total, out of which 200 are based on the ClusterAPI/Metal3 and cover testing, staging and production. In total these clusters have around 2300 nodes. The usage includes the production 5G deployments for Telekom DE in Germany.
+Telekom currently has 100s of clusters, out of which ~200 are based on the ClusterAPI/Metal3 and cover testing, staging and production. In total these clusters have around 2000+ nodes.
 
-Telekom DE is confortable with keeping releases up to date with the upstream releases, seeing very little risk with upgrades and even rollbacks when needed. Internally there are monthly releases for patches, slower for minor releases which often sync with updates to the ClusterAPI.
+Telekom is comfortable with keeping releases up to date with the upstream releases, seeing very little risk with upgrades and even rollbacks when needed. Internally there are monthly releases for patches, slower for minor releases which often sync with updates to the Cluster API.
 
-Telekom DE has an ongoing initiative to harmonize the available Kubernetes platforms across all EU countries, which will not be based on Metal3. Metal3 will stay in use as the "legacy" platform, meaning it will have to be maintained for at least 3 more years.
+Telekom has an ongoing initiative to harmonize the available Kubernetes platforms across all EU countries, which will not be based on Metal3. Metal3 will stay in use as the "legacy" platform, meaning it will have to be maintained for at least 3 more years.
 
-Reasons stated for moving out include: the complexity of the stack, in particular Ironic which is very good to support heterogeneous environments but not justified when the dependency is mostly on Redfish; operating Ironic is a non-trivial task, even if the operator abstracts most of it but experience shows the need to still debug directly in Ironic; the need for an external database which adds an extra dependency on an external service. An internal effort has been ongoing to have a custom cloud provider implementation, based on Redfish/Virtualmedia only, making things homogeneous and enabling a simplification of the stack. Telekom DE adds that as of today Metal3 is still their most reliable solution.
+Reasons stated for moving out include: the complexity of the stack, in particular Ironic which is very good to support heterogeneous environments but not justified when the dependency is mostly on Redfish; operating Ironic is a non-trivial task, even if the operator abstracts most of it but experience shows the need to still debug directly in Ironic; the need for an external database which adds an extra dependency on an external service. An internal effort has been ongoing to have a custom cloud provider implementation, based on Redfish/Virtualmedia only, enabling a simplification of the stack. Telekom adds that as of today Metal3 is still their most reliable solution.
 
 ###### Perception and Feeling
 
-Telekom DE did not require significant interaction with upstream to get things up and running quickly. They found the development environment to be tricky to setup when requiring custom tools or changes. Documentation was good enough, but not at the level of the ClusterAPI docs, although it has significantly improved over the years.
+Telekom did not require significant interaction with upstream to get things up and running quickly. They found the development environment to be tricky to set up when requiring custom tools or changes. Documentation was good enough, but not at the level of the Cluster API docs, although it has significantly improved over the years.
 
-Telekom DE interacts with the project and community mostly on slack, and have been present occasionaly during the project office hours. GitHub is used for interactions around the IPAM component, and they see the reaction being very good for any feature that is seen as valuable by the community. On the down side, examples where traction is not good in the community (example for cross namespace referencing of nodes) do not get strong follow up.
+Telekom interacts with the project and community mostly on Slack, and have been present occasionally during the project office hours. GitHub is used for interactions around the IPAM component, and they see the reaction being very good for any feature that is seen as valuable by the community. On the down side, examples where traction is not good in the community (example for cross namespace referencing of nodes) do not get strong follow up.
 
 ###### Strenghts and Improvements
 
-Telekom DE sees the main strengths of the project being the solidity and maturity of Ironic, the support for multiple different environments and the ease of adoption for existing baremetal infrastructure.
+Telekom sees the main strengths of the project being the solidity and maturity of Ironic, the support for multiple different environments and the ease of adoption for existing bare metal infrastructure.
 
-Telekom DE sees the complexity required to achieve this as one of the weaknesses. Some welcome improvements would be in better exposing internal status and error conditions, which did improve but are still not at the level of what is expected by the ClusterAPI - meaning accessing Ironic directly is often still required. Failure handling of physical hardware also regularly requires manual intervention, which is especially an issue for larger infrastructures.
+Telekom sees the complexity required to achieve this as one of the weaknesses. Some welcome improvements would be in better exposing internal status and error conditions, which did improve but are still not at the level of what is expected by Cluster API - meaning accessing Ironic directly is often still required. Failure handling of physical hardware also regularly requires manual intervention, which is especially an issue for larger infrastructures.
 
 ##### Orange
 
@@ -332,38 +352,38 @@ Orange sees a big benefit from virtualizing the vendor network functions, which 
 
 Orange highlights improvements possible in the documentation, where in some cases access to the component repositories or even the code is required. They also see navigability as an area to improve. In addition to documentation, Orange would like to see improvements in the area of network configuration, with the ability to deploy nodes without DHCP and a consistent way to declare the network configuration - something the community is aware and already focusing on. The baremetal allocation workflow could also be improved, better distinguishing the baremetal operator from the consumer - something not possible today as there is only one baremetal host resource. An existing proposal to improve this area already exists.
 
-##### RedHat
+##### Red Hat
 
 Ramon Acedo Rodriguez, PM in area of infrastructure (previous OpenStack, focus on baremetal) working with OpenShift cloud installers and baremetal.
 
 ###### Usage
 
-RedHat started using Metal3 in 2020, focusing on managing and deployment baremetal OpenShift in an opinionated way. RedHat quickly move half of the installers to this new method shortly after. Production deployments in 2021 started with small clusters (few dozens of nodes) but grew to 250 node clusters the same year and 500 the year after. Current usage includes adoption for internal CI, with validation being done with deployments of up to 2000 nodes. Achieving this size for clusters required several improvements in networking (OVN and other components).
+Red Hat started using Metal3 in 2020, focusing on managing and deploying baremetal OpenShift in an opinionated way, managing bare metal nodes in the same way it manages VMs or cloud instances.. Production deployments in 2021 started with small clusters (less than a dozen nodes) but grew to testing clusters with 200+ node clusters the same year and 500+ the year after. Current usage includes adoption for internal CI, with validation being done with deployments of up to 2000 nodes. Achieving this size for clusters required several improvements in networking (OVN and other components).
 
-RedHat did not consider any alternative in depth, only Tinkerbell was briefly looked at.
+Red Hat did not consider any alternative in depth, only Tinkerbell was briefly looked at.
 
-RedHat usually releases every 4 months, staying close to the latest Metal3 release and aligning with the Kubernetes releases.
+Red Hat usually releases OpenShift every 4 months, staying close to the latest Metal3 release and aligning with the Kubernetes releases.
 
-RedHat's main motivation for adoption of Metal3 included:
+Red Hat's main motivation for adoption of Metal3 included:
 * Previous experience with the Ironic project on OpenStack, with the required internal expertise already available
 * The ease of deployment and scale of baremetal deployments in cloud environments, in particular the consistency with other platforms via the integration with the ClusterAPI and MachineAPI
 * The consistency offered to manage heterogeneous hardware, especially with Redfish
 
-RedHat plans to expand usage of Metal3 to manage nodes with different operating systems. Support exists in Ironic but is not yet integrated internally.
+Red Hat plans to expand usage of Metal3 to manage nodes with different operating systems. Support exists in OpenShift and will be productized during 2025.
 
 ###### Perception and Feeling
 
-RedHat reported that in the early years of usage (2020-22) the main challenges were from issues managing baremetal nodes due to infrastructure requirements - around IP access, proper configuration of the BMCs, network gateways, VPNs and others. Workarounds were required for misbehaviors against the expected Redfish specification, which made this task time consuming at start - opening and following issues upstream. These issues were also seen by other adopters and were smoothed out with time.
+Red Hat reported that in the early years of usage (2020-22) the main challenges were from issues managing baremetal nodes due to infrastructure requirements - around IP access, proper configuration of the BMCs, network gateways, VPNs and others. Workarounds were required for misbehaviors against the expected implementation of the Redfish specification, which made this task time consuming at start - opening and following issues upstream. These issues were also seen by other adopters and were smoothed out with time.
 
-RedHat found the documentation to be lacking in 2020-21 but has seen it was significantly improved and is now in a good state. In particular, RedHat highlighted the focus on having a good entrypoint for new end users and adopters.
+Red Hat found the documentation to be lacking in 2020-21 but has seen it was significantly improved and is now in a good state. In particular, Red Hat highlighted the focus on having a good entrypoint for new end users and adopters.
 
-RedHat's engagement with the community and maintainers has been a good experience, with timely fixes even for complex requests.
+Red Hat's engagement with the community and maintainers has been a good experience, with timely fixes even for complex requests.
 
 ###### Strenghts and Improvements
 
-RedHat sees the core strengths of the project being the consistency across the multiple layers, making it easy to deploy and distribute Metal3 in any Kubernetes distribution. Another strong point is in the ease of use for simpler use cases, which covers the integration with other components in the ecosystem and the onboarding of specific hardware deployments.
+Red Hat sees the core strengths of the project being the consistency across the multiple layers, making it easy to deploy and distribute Metal3 in any Kubernetes distribution. Another strong point is in the ease of use for simpler use cases, which covers the integration with other components in the ecosystem and the onboarding of specific hardware deployments.
 
-RedHat would like to see the hardware management no longer requiring administrator access, which would be particular useful for deployments in public cloud providers. In addition it would be good for the project to add support for multi-tenancy and better self serving capabilities.
+Red Hat would like to see the hardware management no longer requiring administrator access, which would be particular useful for deployments in public cloud providers. In addition it would be good for the project to add support for multi-tenancy and better self serving capabilities.
 
 ##### SUSE
 
