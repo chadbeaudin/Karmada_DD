@@ -26,6 +26,18 @@ _A list of 5-7 potential interviewees. The TOC member can record status changes 
 _This contains notes, observations, and discussion items. This document is shared_
 
 ### Kick off Meeting (4/23/2026)
+Attendees:
+- Chad Beaudin
+- Hongcai
+- 
+- charles_ali@qq.com
+- jayfantasyhjh@gmail.com
+- mszacillo@bloomberg.net
+- qazwsx0939059006@gmail.com
+- zach_li@outlook.com
+- changzhen5@huawei.com
+- joenatech@gmail.com
+- zhangzhuang12@huawei.com
 
 Agenda:
 * Set expectations
