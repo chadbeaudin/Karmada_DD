@@ -29,7 +29,6 @@ _This contains notes, observations, and discussion items. This document is share
 Attendees:
 - Chad Beaudin
 - Hongcai
-- 
 - charles_ali@qq.com
 - jayfantasyhjh@gmail.com
 - mszacillo@bloomberg.net
