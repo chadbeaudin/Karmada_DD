@@ -39,12 +39,20 @@ Attendees:
 - joenatech@gmail.com
 - zhangzhuang12@huawei.com
 
+![alt text](image-1.png)
+
+
+
 Agenda:
 * Set expectations
 * General Steps & Timelines
 * Due Diligence evaluation
 * Adopter Interviews
 * Questions
+  - Can multiple interviews from the same company with different use cases be different interviews or is it just one since it is the same company. (Michas & Joe from Bloomberg)
+  - Send Hongcai list of adopter interview questions
+  - 
+
 
 Discussion:
 * 
