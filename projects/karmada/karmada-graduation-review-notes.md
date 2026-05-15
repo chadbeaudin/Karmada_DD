@@ -10,7 +10,7 @@ Review of the Karmada Graduation Application ([#1572](https://github.com/cncf/to
 |-------|-------|
 | Applied | Mar 26, 2025 by @RainbowMango (Hongcai Ren) |
 | Triaged | Sep 3, 2025 by @jeremyrickard — confirmed sufficient for DD |
-| Assigned | Feb 23, 2026 to @chadbeaudin |
+| Assigned | Feb 23, 2026 to @chadbeaudin and @abebars|
 | Board Status | TOC DD Evaluation (in-progress) |
 | GTR (PR #2133) | Draft, in progress by @brandtkeller — not yet merged |
 | Governance Review | [#1791](https://github.com/cncf/toc/issues/1791) opened Jul 24, 2025 |
@@ -32,11 +32,9 @@ Review of the Karmada Graduation Application ([#1572](https://github.com/cncf/to
 
 ## Strengths Observed
 
-1. **Strong adoption signal** — 30+ production adopters across diverse industries (finance/ICBC, travel/Trip.com, social/Xiaohongshu, video/Bilibili, cloud/Huawei, Bloomberg). This significantly exceeds the 3-adopter minimum.
+1. **Strong adoption signal** — 30+ production adopters across diverse industries (finance/ICBC, travel/Trip.com, social/Xiaohongshu, video/Bilibili, cloud/Huawei, Bloomberg).
 
 1. **Security posture is solid** — Third-party audit completed January 2025 with all findings (1 high, 1 medium, 2 low, 2 informational) resolved. OpenSSF Best Practices badge achieved. Clear vulnerability reporting process.
-
-1. **Governance evolution since incubation** — The project addressed several findings from the 2023 governance review (inactive maintainers, CoC harmonization). They have added maintainership change rules, subproject documentation, roadmap change process, and a dependencies policy.
 
 1. **Maintainer diversity** — 8 maintainers from 6 organizations (Huawei, ByteDance, Moore Threads, DaoCloud, ICBC, VIPKID) with a documented 50% cap rule. This is a meaningful improvement from the 2023 review which flagged Huawei-heavy maintainership.
 
@@ -46,44 +44,47 @@ Review of the Karmada Graduation Application ([#1572](https://github.com/cncf/to
 
 ## Areas Requiring Attention / Potential Blockers
 
-1. **GTR not yet complete** — PR #2133 is still in draft. Per the DD guide, the TOC member can review this themselves if the subproject has not picked it up, but it should be finalized before public comment. This is currently the most significant process gap.
+1. **GTR not yet complete** — PR #2133 is in review.
 
-1. **Governance Review (#1791) status unclear** — Opened July 2025 but no visible completion. The 2023 review by Bill Mulligan found "Mostly Satisfactory" with must-fix items. Need to verify those were resolved:
-   - Were inactive maintainers moved to emeritus? (The application shows only 1 new maintainer added — @wawa0210 — but does not show removals)
-   - Was the CoC harmonized to a single source?
-   - Are OWNERS files now synchronized?
-
-1. **Maintainer lifecycle demonstration is thin** — Only one example provided (adding Xiao Zhang). For graduation, the TOC typically wants to see both additions AND removals/emeritus transitions to demonstrate the lifecycle works in both directions. The 2023 governance review flagged 4 inactive maintainers (@mrlihanbo, @carmark, @zoroyouxi, @lfbear) — their status should be clarified.
+1. **Maintainer lifecycle demonstration is thin** — Only one example provided (adding Xiao Zhang). The maintainer lifecycle process is documented, but the offboarding path has not been demonstrated. The 2023 governance review flagged 4 inactive maintainers (@mrlihanbo, @carmark, @zoroyouxi, @lfbear).  They should be moved to emeritus.I
 
 1. **Adopter interview section still templated** — The application's Adoption section still has `$COMPANY/$INDUSTRY` and `MONTH YEAR` placeholders. These will be filled by the TOC sponsor after conducting interviews, but the 7 adopters submitted via the form need to be contacted.
 
-## Recommendations for DD Execution
-
-Based on the [DD TOC Guide](https://github.com/cncf/toc/blob/main/operations/dd-toc-guide.md):
+[DD TOC Guide](https://github.com/cncf/toc/blob/main/operations/dd-toc-guide.md):
 
 ### 1. Kick-off meeting
 
-Schedule with @RainbowMango. Use the kick-off template (already adapted in `karmada-kickoff-notes.md`). Set expectations on timeline (~3+ months from assignment).
+Schedule with @RainbowMango. Use the kick-off template (already adapted in `karmada-kickoff-notes.md`).
 
 ### 2. Verify governance review findings are resolved
 
 Cross-reference the 2023 review's must-fix items against current state of the repos. Key checks:
 
 - `MAINTAINERS.md` — are inactive members removed?
+   - [Comment](https://github.com/cncf/toc/issues/1572#issuecomment-4451663241) made on DD issue.
 - `CODE_OF_CONDUCT.md` — is there now a single canonical CoC?
+  - CoC issue has been rectified.  Now one CoC pointing to CNCF CoC
 - `OWNERS` files — are they consistent across repos?
+  - [Comment](https://github.com/cncf/toc/issues/1572#issuecomment-4452003587) regarding inconsistent OWNERS
 
 ### 3. GTR coordination
 
-Since @brandtkeller has the draft PR (#2133), coordinate with them on timeline. DD activities can proceed in parallel.
+GTR was completed by @brandtkeller PR [#2133](https://github.com/cncf/toc/pull/2133)
+- GTR Q&A [here](https://github.com/brandtkeller/toc/blob/1769_karmada_technical_review/projects/karmada/tech-review/2026-04-21.md)
+
+Area(s) of concern.  
+  - "These certificates are stored in Kubernetes ConfigMaps or Secrets, and are manually provisioned and rotated by cluster administrators."  
+    - This could be fairly labor intensive if a project is using Karmada to manage dozens of clusters.
+  - Upgrade->downgrade->upgrade was not tested.
+    - This is not significant, but worth investigating.
 
 ### 4. Adopter interviews
 
-Reach out to the 7 submitted adopters. Per the guide, aim for 3 completed interviews minimum across different industries. Use the [adopter questions template](https://github.com/cncf/toc/blob/main/operations/toc-templates/template-adopter-questions.md). Notable adopters to prioritize for diversity:
+Reached out to the submitted adopters. Per the guide, aiming for 3-5 interviews across different industries or use cases. Will use the [adopter questions template](https://github.com/cncf/toc/blob/main/operations/toc-templates/template-adopter-questions.md).
 
 - Bloomberg (finance, Western company — good diversity signal)
-- Xiaohongshu or Bilibili (large-scale Chinese internet)
 - Trip.com (travel, migration from KubeFed story)
+- Xiaohongshu or Bilibili (large-scale Chinese internet) (TODO)
 
 ### 5. Security audit review
 
@@ -97,9 +98,8 @@ Per the DD guide, verify compliance with CNCF licensing policy (Apache 2.0 for t
 
 - Application filed: Mar 2025
 - Triaged: Sep 2025
-- Assigned to @chadbeaudin: Feb 23, 2026
+- Assigned to @chadbeaudin: Feb 23, 2026 (added Ahmed Bebars as shadow May 14, 2026)
 - Current date: May 7, 2026
-- **KubeCon EU 2026** — check if the 4-week freeze applies to your timeline
 - Target: Complete DD, interviews, internal review, then public comment + vote
 
 ## Summary
