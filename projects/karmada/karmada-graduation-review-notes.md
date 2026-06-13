@@ -46,7 +46,7 @@ Review of the Karmada Graduation Application ([#1572](https://github.com/cncf/to
 
 1. **GTR not yet complete** — PR #2133 is in review.
 
-1. **Maintainer lifecycle demonstration is thin** — Only one example provided (adding Xiao Zhang). The maintainer lifecycle process is documented, but the offboarding path has not been demonstrated. The 2023 governance review flagged 4 inactive maintainers (@mrlihanbo, @carmark, @zoroyouxi, @lfbear).  They should be moved to emeritus.I
+1. **Maintainer lifecycle demonstration is lacking** — Only one example provided (adding Xiao Zhang). The maintainer lifecycle process is documented, but the offboarding path has not been demonstrated. The 2023 governance review flagged 4 inactive maintainers (@mrlihanbo, @carmark, @zoroyouxi, @lfbear).  They should be moved to emeritus.I
 
 1. **Adopter interview section still templated** — The application's Adoption section still has `$COMPANY/$INDUSTRY` and `MONTH YEAR` placeholders. These will be filled by the TOC sponsor after conducting interviews, but the 7 adopters submitted via the form need to be contacted.
 
@@ -75,6 +75,7 @@ GTR was completed by @brandtkeller PR [#2133](https://github.com/cncf/toc/pull/2
 Area(s) of concern.  
   - "These certificates are stored in Kubernetes ConfigMaps or Secrets, and are manually provisioned and rotated by cluster administrators."  
     - This could be fairly labor intensive if a project is using Karmada to manage dozens of clusters.
+    - While this is an inconvenience, it is not a showstopper.
   - Upgrade->downgrade->upgrade was not tested.
     - This is not significant, but worth investigating.
 
@@ -88,11 +89,14 @@ Reached out to the submitted adopters. Per the guide, aiming for 3-5 interviews 
 
 ### 5. Security audit review
 
-Review the [OSTIF audit report](https://github.com/karmada-io/community/blob/main/security-team/assessments/OSTIF-Karmada-Report.pdf) to confirm all critical/high findings resolved. Check for any operational security recommendations that should be noted in the DD.
+The [OSTIF audit report](https://github.com/karmada-io/community/blob/main/security-team/assessments/OSTIF-Karmada-Report.pdf) was reviewed and confirmed all critical/high findings were resolved. 
+
+The HIGH (Insecure Design of Pull Mode) and MEDIUM (Multiple TarSlips in CRDs Archive Extraction) findings are both **Closed** as of Karmada v1.12.0 (November 30, 2024). Fix PRs: [#5793](https://github.com/karmada-io/karmada/pull/5793), [#5703](https://github.com/karmada-io/karmada/pull/5703), [#5713](https://github.com/karmada-io/karmada/pull/5713).
 
 ### 6. Licensing check
 
 Per the DD guide, verify compliance with CNCF licensing policy (Apache 2.0 for the main project, check dependencies).
+ [Verified Apache 2.0](https://github.com/karmada-io/karmada/blob/master/LICENSE)
 
 ## Process Timeline Considerations
 

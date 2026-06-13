@@ -28,10 +28,13 @@ N/A
 
 ### Required
 
-- [ ] **Engage with the domain specific TAG(s) to increase awareness through a presentation or completing a General Technical Review.**
-  - This was completed and occurred on DD-MMM-YYYY, and can be discovered at $LINK.
+- [x] **Engage with the domain specific TAG(s) to increase awareness through a presentation or completing a General Technical Review.**
+  - A General Technical Review was completed on 21-Apr-2026 by @brandtkeller via [PR #2133](https://github.com/cncf/toc/pull/2133). The GTR Q&A document is available at [projects/karmada/tech-review/2026-04-21.md](https://github.com/brandtkeller/toc/blob/1769_karmada_technical_review/projects/karmada/tech-review/2026-04-21.md).
 
-<!-- (TOC Evaluation goes here) --> 
+The GTR confirmed that Karmada's control plane architecture (karmada-apiserver, karmada-controller-manager, karmada-scheduler, karmada-webhook, karmada-agent) provides clear separation of concerns for multi-cluster management. Two areas were called out:
+
+1. **Certificate management is manual.** Certificates for cluster registration are stored in Kubernetes ConfigMaps/Secrets and must be provisioned and rotated by cluster administrators. At scale (dozens of clusters), this adds operational burden. The project has active work to address this: [PR #5037](https://github.com/karmada-io/karmada/pull/5037) (automatic cert rotation) and [PR #6553](https://github.com/karmada-io/karmada/pull/6553) (cert rotation on helm upgrade). Known limitation with a tracked improvement path; not a graduation blocker.
+1. **Upgrade/downgrade/upgrade path was not tested.** Not significant, but noted for completeness.
 
 - [ ]  **All project metadata and resources are [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
 
@@ -230,11 +233,22 @@ Note: this section may be augmented by a joint-assessment performed by TAG Secur
 
 <!-- (TOC Evaluation goes here) --> 
 
-- [ ] **Third Party Security Review.**
+- [x] **Third Party Security Review.**
 
-  - [ ] Moderate and low findings from the Third Party Security Review are planned/tracked for resolution as well as overall thematic findings, such as: improving project contribution guide providing a PR review guide to look for memory leaks and other vulnerabilities the project may be susceptible to by design or language choice ensuring adequate test coverage on all PRs.
+  A third-party security audit was performed by [Shielder](https://www.shielder.com) (commissioned by OSTIF) against Karmada v1.11.0 in September–October 2024. The [final report](https://github.com/karmada-io/community/blob/main/security-team/assessments/OSTIF-Karmada-Report.pdf) was published January 9, 2025. Six findings were identified:
 
-<!-- (TOC Evaluation goes here) --> 
+  | ID | Finding | Severity | Status |
+  | -- | ------- | -------- | ------ |
+  | 1 | Insecure Design of Pull Mode | HIGH | Closed ([PR #5793](https://github.com/karmada-io/karmada/pull/5793), v1.12.0) |
+  | 2 | Multiple TarSlips in CRDs Archive Extraction | MEDIUM | Closed ([PR #5703](https://github.com/karmada-io/karmada/pull/5703), [PR #5713](https://github.com/karmada-io/karmada/pull/5713), v1.12.0) |
+  | 3 | Insecure Default Configuration | LOW | Closed ([PR #5739](https://github.com/karmada-io/karmada/pull/5739), v1.12.0) |
+  | 4 | Bootstrap Token Leaked in Command Output | INFORMATIONAL | Closed ([PR #5714](https://github.com/karmada-io/karmada/pull/5714), v1.12.0) |
+  | 5 | Denial of Service (DoS) in LuaVM Package | LOW | Open (upstream dependency — gopher-lua maintainer unresponsive) |
+  | 6 | K8s Pods Executed with Unnecessary Privileges | INFORMATIONAL | Open |
+
+  All high and medium findings were resolved in Karmada v1.12.0 (released November 30, 2024). The two remaining open items are low/informational severity: Finding 5 is blocked on an unresponsive upstream dependency (gopher-lua), and Finding 6 is a hardening recommendation for pod security contexts.
+
+  - [x] Moderate and low findings from the Third Party Security Review are planned/tracked for resolution as well as overall thematic findings. The low-severity LuaVM DoS (Finding 5) is tracked and blocked on an upstream fix. The informational pod-privileges item (Finding 6) is a hardening recommendation with no immediate security impact. 
 
 - [ ] **Achieve the Open Source Security Foundation (OpenSSF) Best Practices passing badge.**
 
