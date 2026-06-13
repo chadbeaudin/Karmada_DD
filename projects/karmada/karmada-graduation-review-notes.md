@@ -34,7 +34,7 @@ Review of the Karmada Graduation Application ([#1572](https://github.com/cncf/to
 
 1. **Strong adoption signal** — 30+ production adopters across diverse industries (finance/ICBC, travel/Trip.com, social/Xiaohongshu, video/Bilibili, cloud/Huawei, Bloomberg).
 
-1. **Security posture is solid** — Third-party audit completed January 2025 with all findings (1 high, 1 medium, 2 low, 2 informational) resolved. OpenSSF Best Practices badge achieved. Clear vulnerability reporting process.
+1. **Security posture is solid** — Third-party audit completed January 2025 with all high and medium findings resolved. OpenSSF Best Practices badge achieved. Clear vulnerability reporting process.
 
 1. **Maintainer diversity** — 8 maintainers from 6 organizations (Huawei, ByteDance, Moore Threads, DaoCloud, ICBC, VIPKID) with a documented 50% cap rule. This is a meaningful improvement from the 2023 review which flagged Huawei-heavy maintainership.
 
