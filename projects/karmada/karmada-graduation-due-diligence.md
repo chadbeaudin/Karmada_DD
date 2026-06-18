@@ -12,7 +12,7 @@ Chad Beaudin and Ahmed Bebars conducted the due diligence of Karmada who applied
 
 ### Adoption Evaluation
 
-The adopter interviews reflect a project in production use and at scale commensurate for graduation. Interviews span diverse industries and geographies including finance (Bloomberg), travel (Trip.com), and large-scale internet platforms, demonstrating that Karmada is being used for real multi-cluster workload management in production environments. <!-- TODO verify: third interview (Xiaohongshu/Bilibili) not yet completed -->
+The adopter interviews reflect a project in production use and at scale commensurate for graduation. Seven interviewees across two organizations (Bloomberg — 3 teams, Trip.com) confirmed production deployments managing multi-cluster workloads at significant scale. Bloomberg operates Karmada as a managed internal platform serving multiple tenant teams (GPU/HPC, streaming, general compute), while Trip.com has run Karmada for 3 years in production managing 40 clusters, 10K applications, and 1M cores. All adopters emphasized Karmada's Kubernetes-native API compatibility, collaborative community, and would find removal very difficult (1–2+ years). The interviews provide strong evidence of real-world production maturity across finance and travel industries.
 
 ### Final Assessment
 
@@ -38,7 +38,7 @@ The GTR confirmed that Karmada's control plane architecture (karmada-apiserver, 
 
 - [x]  **All project metadata and resources are [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
 
-  Governance documents include a 50% maintainer cap rule preventing any single organization from holding majority control. Communication channels (Slack, mailing list, GitHub) are neutral. The project is hosted under the CNCF umbrella with no single-vendor branding.   Adopter interviews repeatedly highlighted the responsiveness and strength of the projects' community.
+  Communication channels (Slack, mailing list, GitHub) are neutral. The project is hosted under the CNCF umbrella with no single-vendor branding. Adopter interviews repeatedly highlighted the responsiveness and strength of the projects' community.
 
 - [x] **Review and acknowledgement of expectations for [Sandbox](sandbox.cncf.io) projects and requirements for moving forward through the CNCF Maturity levels.**		
    - [x] Met during Project's application on 26-Mar-2025. Application triaged 03-Sep-2025 by @jeremyrickard who confirmed it was sufficient for DD.
@@ -63,7 +63,7 @@ Overall the project has good governance and a diverse set of maintainers.
 
 - [x]  **Governance has continuously been iterated upon by the project as a result of their experience applying it, with the governance history demonstrating evolution of maturity alongside the project's maturity evolution.**
 
-  The project's governance has evolved since incubation. Key improvements include: addressing the Huawei-heavy maintainership flagged in the 2023 governance review (now 8 maintainers from 6 organizations), establishing a documented 50% cap rule, rectifying the CoC to a single canonical document, and expanding community roles. The git history of governance documents shows iterative refinement over time.
+  The project's governance has evolved since incubation. Key improvements include diversifying maintainership across 6 organizations, establishing the 50% cap rule, rectifying the CoC, and expanding community roles. The git history of governance documents shows iterative refinement over time.
 
 ### Required
 
@@ -73,11 +73,11 @@ Overall the project has good governance and a diverse set of maintainers.
 
 - [x] **Governance is up to date with actual project activities, including any meetings, elections, leadership, or approval processes.**
 
-  Community meetings are held regularly (bi-weekly) and recorded. Meeting notes are publicly available. The maintainer list reflects current active contributors, though the 4 inactive maintainers flagged in 2023 still need to be moved to emeritus (tracked as a recommendation). 
+  Community meetings are held regularly (bi-weekly) and recorded. Meeting notes are publicly available. The inactive maintainer issue is tracked as a recommendation (see section intro above). 
 
 - [x] **Governance clearly documents [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) of project direction.**
 
-  Governance values include a documented 50% maintainer cap rule. Communication channels are vendor-neutral (CNCF Slack, GitHub, mailing list). No single vendor controls project direction. 
+  Governance values include a documented maintainer cap rule (see "Project maintainers from at least 2 organizations" below). Communication channels are vendor-neutral (CNCF Slack, GitHub, mailing list). No single vendor controls project direction. 
 
 - [x] **Document how the project makes decisions on leadership, contribution acceptance, requests to the CNCF, and changes to governance or project goals.**
 
@@ -89,11 +89,11 @@ Overall the project has good governance and a diverse set of maintainers.
 
 - [x] **Document a complete maintainer lifecycle process (including roles, onboarding, offboarding, and emeritus status).**
 
-  Documented in the project governance. However, the offboarding/emeritus path has not been actively demonstrated. Innactive members should be moved to emeritus. A [comment](https://github.com/cncf/toc/issues/1572#issuecomment-4451663241) was made on the DD issue requesting this be addressed.
+  Documented in the project governance. The offboarding/emeritus path has not been actively demonstrated (see section intro for details).
 
 - [x] **Demonstrate usage of the maintainer lifecycle with outcomes, either through the addition or replacement of maintainers as project events have required.**
 
-  One example provided: addition of Xiao Zhang as maintainer. The offboarding path has not been demonstrated, and this is a gap. The 2023 governance review identified 4 inactive maintainers who remain listed. Resolution of this is tracked as a DD action item.
+  One example provided: addition of Xiao Zhang as maintainer. The offboarding path has not been demonstrated and is tracked as a DD action item.
 
 - [x] **Document complete list of current maintainers, including names, contact information, domain of responsibility, and affiliation.**
 
@@ -117,7 +117,7 @@ Overall the project has good governance and a diverse set of maintainers.
 
 - [x] **CNCF Code of Conduct is cross-linked from other governance documents.**
 
-  The CNCF CoC is referenced from the community repository and contribution guidelines. The single canonical CODE_OF_CONDUCT.md properly links to the CNCF CoC.
+  The CNCF CoC is referenced from the community repository and contribution guidelines.
 
 - [x] **All subprojects, if any, are listed.**
 
@@ -270,17 +270,18 @@ N/A
 
 - [x] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
 
-  7 adopters submitted via the TOC interview form. Interviews targeted across industries:
+  7 adopters submitted via the TOC interview form. Interviews conducted with 7 interviewees across 2 organizations (3 Bloomberg teams + Trip.com):
 
-  - Bloomberg (finance, Western company - good diversity signal)
-  - Trip.com (travel, migration from KubeFed story)
-  - Xiaohongshu or Bilibili (large-scale Chinese internet) (TODO) 
+  - Bloomberg — GPU/HPC scheduling team (production since mid-2024)
+  - Bloomberg — Streaming platform team (production 2024, v1.17)
+  - Bloomberg — Cloud Compute Services / managed Karmada platform (first tenant production March 2026)
+  - Trip.com — Multi-cluster orchestration (3 years in production, 40 clusters, 1M cores)
 
 The project provided the TOC with a list of adopters for verification of use of the project at the level expected, i.e. production use for graduation, dev/test for incubation.
 
 - [x] **TOC verification of adopters.**
 
-  Adopter interviews were conducted across multiple industries to verify production use. Bloomberg (finance), Trip.com (travel/migration from KubeFed), and additional large-scale adopters confirmed production deployments managing multi-cluster workloads at scale. 
+  Adopter interviews were conducted to verify production use. Bloomberg (finance — 3 independent teams) and Trip.com (travel/migration from KubeFed) confirmed production deployments managing multi-cluster workloads at scale. Both organizations would find removal very difficult (1–2+ years). 
 
 Refer to the Adoption portion of this document.
 
@@ -290,14 +291,20 @@ Refer to the Adoption portion of this document.
 
 #### Adoption
 
-##### Adopter 1 - Bloomberg / Finance
+##### Adopter 1 - Bloomberg / Finance (3 teams, 5 interviewees)
 
-Large financial services company using Karmada for multi-cluster workload management across their infrastructure. Western company providing geographic and industry diversity in the adopter pool.
+Bloomberg uses Karmada across three independent platform teams:
 
-##### Adopter 2 - Trip.com / Online Travel
+1. **GPU/HPC Scheduling** — Multi-cluster scheduler for GPU-intensive model training. Evaluated late 2023, production mid-2024. Runs an internal fork to fast-track priority/preemption scheduling (pending upstream merge). Shifted quota model from GPU-count to GPU-time, revealing over-provisioning and avoiding unnecessary hardware purchases.
 
-Major online travel platform that migrated from KubeFed to Karmada for cross-cluster auto-scaling and multi-cluster resource management in production.
+2. **Streaming Platform (Apache Flink)** — Cross-cluster disaster recovery for stateful stream processing. Failover between regions without restarting workloads. Federated resource quota for capacity planning. Currently on v1.17 (March 2026 release).
 
-##### Adopter 3 - TBD / Large-scale Internet
+3. **Cloud Compute Services (Managed Platform)** — Fully managed Karmada-as-a-service for internal teams. Control planes stretched across data centers for HA/DR. First tenant reached production maturity March 2026. Reduces multi-cluster setup from weeks to minutes.
 
-Xiaohongshu or Bilibili (large-scale Chinese internet platform) - interview pending.
+Key signals: Bloomberg team members are project maintainers. Would maintain an internal fork if the project were archived. Removal difficulty: very high.
+
+##### Adopter 2 - Trip.com / Online Travel (2 interviewees)
+
+Major online travel platform running Karmada for 3 years in production. Migrated from KubeFed due to its non-standard APIs and project inactivity. Scale: 40 total clusters, largest instance managing 25 clusters, 10K applications, 1M cores, 400K objects. Built distributed multi-cluster HPA on Karmada's object contract layer. Migrated 300K stateless workloads across clusters seamlessly.
+
+Maintains an internal fork (based on v1.5.1, ~10 internal releases/year) due to performance requirements at scale — removed the Work object entirely. Has a maintainer (Zach) on the project. Removal would take 1–2+ years.
